@@ -30,16 +30,6 @@ export interface CodingProblem {
   }[];
   approach: ApproachDetails;
   pythonSolution: string;
-  starterCode: string;
-  testCases: TestCase[];
-}
-
-export interface TestExecutionResult {
-  testIndex: number;
-  input: string;
-  expectedOutput: string;
-  actualOutput: string;
-  passed: boolean;
-  executionTimeMs: number;
-  error?: string;
+  starterCode?: string;
+  testCases?: TestCase[];
 }

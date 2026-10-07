@@ -3,7 +3,6 @@ import { CodingProblem } from '../../types/coding';
 import { 
   Code2, 
   Lightbulb, 
-  Play, 
   CheckCircle2, 
   Bookmark, 
   BookmarkCheck, 
@@ -14,8 +13,9 @@ import {
   Clock, 
   Cpu, 
   Sparkles,
-  ExternalLink
+  BookOpen
 } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 interface ProblemCardProps {
   problem: CodingProblem;
@@ -23,7 +23,7 @@ interface ProblemCardProps {
   isBookmarked: boolean;
   onToggleSolved: (id: string) => void;
   onToggleBookmark: (id: string) => void;
-  onOpenPractice: (problem: CodingProblem) => void;
+  onOpenDetails?: (problem: CodingProblem) => void;
 }
 
 export const ProblemCard: React.FC<ProblemCardProps> = ({
@@ -32,7 +32,7 @@ export const ProblemCard: React.FC<ProblemCardProps> = ({
   isBookmarked,
   onToggleSolved,
   onToggleBookmark,
-  onOpenPractice
+  onOpenDetails
 }) => {
   const [showApproach, setShowApproach] = useState<boolean>(false);
   const [showSolution, setShowSolution] = useState<boolean>(false);
@@ -44,55 +44,62 @@ export const ProblemCard: React.FC<ProblemCardProps> = ({
     setTimeout(() => setCopiedCode(false), 2000);
   };
 
+  const handleToggleSolved = () => {
+    if (!isSolved) {
+      confetti({
+        particleCount: 60,
+        spread: 60,
+        origin: { y: 0.6 }
+      });
+    }
+    onToggleSolved(problem.id);
+  };
+
   const getDifficultyBadge = (diff: string) => {
     switch (diff) {
       case 'Easy':
-        return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
+        return 'bg-[#F0FDF4] text-[#166534] border-[#BBF7D0]';
       case 'Medium':
-        return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
+        return 'bg-[#FFFBEB] text-[#92400E] border-[#FDE68A]';
       case 'Hard':
-        return 'bg-rose-500/10 text-rose-400 border-rose-500/30';
+        return 'bg-[#FFF1F2] text-[#9F1239] border-[#FECDD3]';
       default:
-        return 'bg-blue-500/10 text-blue-400 border-blue-500/30';
+        return 'bg-[#F4EFEA] text-[#786F6A] border-[#E5DDD2]';
     }
   };
 
-  const getRoleBadge = (role: string) => {
-    if (role.includes('Ninja')) return 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20';
-    if (role.includes('Digital')) return 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20';
-    return 'bg-purple-500/10 text-purple-300 border-purple-500/20';
-  };
+  const solutionLines = problem.pythonSolution.split('\n');
 
   return (
-    <div className={`p-6 rounded-2xl border transition-all duration-200 ${
+    <div className={`p-6 rounded-2xl border transition-all duration-300 ${
       isSolved 
-        ? 'bg-slate-900/60 border-emerald-500/30 shadow-lg shadow-emerald-500/5' 
-        : 'bg-slate-900/90 border-slate-800 hover:border-slate-700 shadow-md'
+        ? 'bg-[#FAFDF9] border-[#BBF7D0] shadow-sm' 
+        : 'bg-white border-[#EBE4DC] hover:border-[#D9CFC4] shadow-sm hover:shadow-md'
     }`}>
       
       {/* Top Header & Badges */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-3.5">
         <div className="flex flex-wrap items-center gap-2">
-          <span className={`px-2.5 py-1 text-xs font-bold rounded-lg border ${getDifficultyBadge(problem.difficulty)}`}>
+          <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-lg border ${getDifficultyBadge(problem.difficulty)}`}>
             {problem.difficulty}
           </span>
-          <span className={`px-2.5 py-1 text-xs font-semibold rounded-lg border ${getRoleBadge(problem.roleTarget)}`}>
+          <span className="px-2.5 py-0.5 text-[11px] font-medium rounded-lg bg-[#FAF7F2] text-[#635A54] border border-[#EBE4DC]">
             {problem.roleTarget}
           </span>
           {problem.isPYQ && (
-            <span className="px-2 py-0.5 text-[11px] font-bold rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/30">
+            <span className="px-2 py-0.5 text-[10px] font-semibold rounded-md bg-[#FFF7ED] text-[#C2410C] border border-[#FFEDD5]">
               {problem.pyqSlot || 'TCS PYQ'}
             </span>
           )}
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1.5">
           <button
             onClick={() => onToggleBookmark(problem.id)}
             className={`p-1.5 rounded-lg border transition-colors ${
               isBookmarked 
-                ? 'bg-amber-500/20 border-amber-500/40 text-amber-400' 
-                : 'bg-slate-800/80 border-slate-700 text-slate-400 hover:text-slate-200'
+                ? 'bg-[#FEF3C7] border-[#FDE68A] text-[#D97706]' 
+                : 'bg-[#FAF7F2] border-[#EBE4DC] text-[#A89F98] hover:text-[#2D2522]'
             }`}
             title={isBookmarked ? "Remove Bookmark" : "Bookmark Problem"}
           >
@@ -100,11 +107,11 @@ export const ProblemCard: React.FC<ProblemCardProps> = ({
           </button>
 
           <button
-            onClick={() => onToggleSolved(problem.id)}
-            className={`flex items-center space-x-1 px-3 py-1 rounded-lg text-xs font-semibold border transition-all ${
+            onClick={handleToggleSolved}
+            className={`flex items-center space-x-1 px-2.5 py-1 rounded-lg text-xs font-medium border transition-all ${
               isSolved 
-                ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400' 
-                : 'bg-slate-800/80 border-slate-700 text-slate-400 hover:text-slate-200'
+                ? 'bg-[#F0FDF4] border-[#86EFAC] text-[#166534]' 
+                : 'bg-[#FAF7F2] border-[#EBE4DC] text-[#786F6A] hover:text-[#2D2522] hover:bg-white'
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5" />
@@ -114,139 +121,170 @@ export const ProblemCard: React.FC<ProblemCardProps> = ({
       </div>
 
       {/* Problem Title & Tags */}
-      <div className="mb-3">
-        <h3 className="text-lg font-bold text-white tracking-tight hover:text-indigo-300 transition-colors cursor-pointer" onClick={() => onOpenPractice(problem)}>
+      <div className="mb-2.5">
+        <h3 
+          className="text-base sm:text-lg font-semibold text-[#2D2522] tracking-tight hover:text-[#B86B77] transition-colors cursor-pointer"
+          onClick={() => onOpenDetails && onOpenDetails(problem)}
+        >
           {problem.title}
         </h3>
-        <div className="flex flex-wrap gap-1.5 mt-2">
+        <div className="flex flex-wrap gap-1.5 mt-1.5">
           {problem.tags.map((tag, tIdx) => (
-            <span key={tIdx} className="text-[11px] px-2 py-0.5 rounded-md bg-slate-800 text-slate-400 border border-slate-700/60 font-mono">
+            <span key={tIdx} className="text-[10px] px-2 py-0.5 rounded-md bg-[#FAF7F2] text-[#8C827A] border border-[#EBE4DC] font-mono">
               #{tag}
             </span>
           ))}
         </div>
       </div>
 
-      {/* Brief Description */}
-      <p className="text-sm text-slate-300 leading-relaxed line-clamp-3 mb-5">
+      {/* Problem Description */}
+      <p className="text-xs sm:text-sm text-[#5A524D] leading-relaxed mb-4 font-normal whitespace-pre-line">
         {problem.description}
       </p>
 
+      {/* Constraints if available */}
+      {problem.constraints && problem.constraints.length > 0 && (
+        <div className="mb-4 p-3 rounded-xl bg-[#FAF7F2] border border-[#EBE4DC] text-xs">
+          <span className="text-[10px] font-semibold text-[#786F6A] uppercase tracking-wider block mb-1">Constraints:</span>
+          <ul className="list-disc list-inside space-y-0.5 font-mono text-[11px] text-[#5A524D]">
+            {problem.constraints.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* Sample Examples Preview */}
-      {problem.examples && problem.examples[0] && (
-        <div className="mb-5 p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs font-mono space-y-1.5">
-          <div className="text-slate-500 font-bold uppercase tracking-wider text-[10px]">Example 1</div>
-          <div className="text-slate-300"><strong className="text-slate-400">Input:</strong> {problem.examples[0].input.replace(/\n/g, ' ')}</div>
-          <div className="text-indigo-300"><strong className="text-slate-400">Output:</strong> {problem.examples[0].output.replace(/\n/g, ' ')}</div>
+      {problem.examples && problem.examples.length > 0 && (
+        <div className="mb-4 space-y-2">
+          {problem.examples.slice(0, 2).map((ex, i) => (
+            <div key={i} className="p-3 rounded-xl bg-[#FAF7F2] border border-[#EBE4DC] text-xs font-mono space-y-1">
+              <div className="text-[#8C827A] font-semibold text-[10px] uppercase tracking-wider">Example {i + 1}</div>
+              <div className="text-[#4A423D]"><strong className="text-[#786F6A]">Input:</strong> {ex.input.replace(/\n/g, ' ')}</div>
+              <div className="text-[#2D2522] font-semibold"><strong className="text-[#786F6A]">Output:</strong> {ex.output.replace(/\n/g, ' ')}</div>
+              {ex.explanation && (
+                <div className="text-[#635A54] font-sans italic text-[11px] pt-0.5">
+                  Explanation: {ex.explanation}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       )}
 
       {/* Action Buttons Row */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800">
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-[#EBE4DC]">
         <div className="flex items-center space-x-2">
           {/* Approach Button */}
           <button
-            onClick={() => {
-              setShowApproach(!showApproach);
-              if (showSolution) setShowSolution(false);
-            }}
-            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
+            onClick={() => setShowApproach(!showApproach)}
+            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
               showApproach
-                ? 'bg-amber-500/20 border-amber-500/40 text-amber-300'
-                : 'bg-slate-800 hover:bg-slate-700/80 border-slate-700 text-slate-300'
+                ? 'bg-[#FEF3C7] border-[#FDE68A] text-[#92400E] shadow-sm'
+                : 'bg-[#FAF7F2] hover:bg-[#F4EFEA] border-[#EBE4DC] text-[#635A54]'
             }`}
           >
-            <Lightbulb className="w-3.5 h-3.5 text-amber-400" />
+            <Lightbulb className="w-3.5 h-3.5 text-[#D97706]" />
             <span>Approach</span>
-            {showApproach ? <ChevronUp className="w-3.5 h-3.5 ml-1" /> : <ChevronDown className="w-3.5 h-3.5 ml-1" />}
+            {showApproach ? <ChevronUp className="w-3 h-3 ml-0.5" /> : <ChevronDown className="w-3 h-3 ml-0.5" />}
           </button>
 
           {/* Python Solution Button */}
           <button
-            onClick={() => {
-              setShowSolution(!showSolution);
-              if (showApproach) setShowApproach(false);
-            }}
-            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
+            onClick={() => setShowSolution(!showSolution)}
+            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border transition-all ${
               showSolution
-                ? 'bg-indigo-500/20 border-indigo-500/40 text-indigo-300'
-                : 'bg-slate-800 hover:bg-slate-700/80 border-slate-700 text-slate-300'
+                ? 'bg-[#FFF1F2] border-[#FECDD3] text-[#9F1239] shadow-sm'
+                : 'bg-[#FAF7F2] hover:bg-[#F4EFEA] border-[#EBE4DC] text-[#635A54]'
             }`}
           >
-            <Code2 className="w-3.5 h-3.5 text-indigo-400" />
+            <Code2 className="w-3.5 h-3.5 text-[#B86B77]" />
             <span>Python Solution</span>
-            {showSolution ? <ChevronUp className="w-3.5 h-3.5 ml-1" /> : <ChevronDown className="w-3.5 h-3.5 ml-1" />}
+            {showSolution ? <ChevronUp className="w-3 h-3 ml-0.5" /> : <ChevronDown className="w-3 h-3 ml-0.5" />}
           </button>
         </div>
 
-        {/* Toggle Practice in IDE Button */}
-        <button
-          onClick={() => onOpenPractice(problem)}
-          className="flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-lg shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5"
-        >
-          <Play className="w-3.5 h-3.5 fill-current" />
-          <span>Toggle Practice in IDE</span>
-          <ExternalLink className="w-3 h-3 ml-0.5" />
-        </button>
+        {/* Full Details Modal Button */}
+        {onOpenDetails && (
+          <button
+            onClick={() => onOpenDetails(problem)}
+            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-[#2D2522] hover:bg-[#1F1A18] text-white shadow-sm transition-all"
+            title="Open dedicated study view"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>Full View</span>
+          </button>
+        )}
       </div>
 
       {/* Accordion: Approach View */}
       {showApproach && (
-        <div className="mt-4 p-5 rounded-2xl bg-slate-950 border border-amber-500/20 space-y-4 animate-fadeIn">
+        <div className="mt-4 p-4.5 rounded-2xl bg-[#FAF7F2] border border-[#EBE4DC] space-y-3.5 animate-fadeIn">
           <div>
-            <div className="flex items-center space-x-2 text-amber-400 font-bold text-xs uppercase tracking-wider mb-1.5">
-              <Sparkles className="w-4 h-4" />
-              <span>Core Intuition & Logic</span>
+            <div className="flex items-center space-x-1.5 text-[#92400E] font-semibold text-xs uppercase tracking-wider mb-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#D97706]" />
+              <span>Core Intuition</span>
             </div>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p className="text-[#4A423D] text-xs sm:text-sm leading-relaxed font-normal">
               {problem.approach.intuition}
             </p>
           </div>
 
           <div>
-            <div className="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-              Step-by-Step Algorithm
+            <div className="text-[11px] font-semibold text-[#635A54] uppercase tracking-wider mb-2">
+              Algorithm Steps
             </div>
-            <ol className="list-decimal list-inside space-y-1 text-xs text-slate-300">
+            <ol className="space-y-1.5 text-xs text-[#5A524D]">
               {problem.approach.algorithm.map((step, sIdx) => (
-                <li key={sIdx} className="leading-relaxed">{step}</li>
+                <li key={sIdx} className="flex items-start space-x-2 bg-white p-2.5 rounded-xl border border-[#EBE4DC] leading-relaxed">
+                  <span className="font-semibold text-[#2D2522] min-w-4">{sIdx + 1}.</span>
+                  <span>{step}</span>
+                </li>
               ))}
             </ol>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-2 border-t border-slate-800 text-xs">
-            <div className="flex items-center space-x-1.5 text-slate-400">
-              <Clock className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Time: <strong className="text-slate-200">{problem.approach.timeComplexity}</strong></span>
+          <div className="flex flex-wrap gap-4 pt-2.5 border-t border-[#E8DFC9]/60 text-xs text-[#786F6A]">
+            <div className="flex items-center space-x-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#588157]" />
+              <span>Time: <strong className="text-[#166534] font-mono font-semibold">{problem.approach.timeComplexity}</strong></span>
             </div>
-            <div className="flex items-center space-x-1.5 text-slate-400">
-              <Cpu className="w-3.5 h-3.5 text-purple-400" />
-              <span>Space: <strong className="text-slate-200">{problem.approach.spaceComplexity}</strong></span>
+            <div className="flex items-center space-x-1.5">
+              <Cpu className="w-3.5 h-3.5 text-[#8B7EC8]" />
+              <span>Space: <strong className="text-[#6B21A8] font-mono font-semibold">{problem.approach.spaceComplexity}</strong></span>
             </div>
           </div>
         </div>
       )}
 
-      {/* Accordion: Python Solution View (Strictly Python, No Java/C++) */}
+      {/* Accordion: Python Solution View (Strictly Python) */}
       {showSolution && (
-        <div className="mt-4 rounded-2xl bg-slate-950 border border-indigo-500/20 overflow-hidden animate-fadeIn">
-          <div className="flex items-center justify-between px-4 py-2.5 bg-slate-900 border-b border-slate-800 text-xs">
-            <span className="font-mono font-bold text-indigo-400 flex items-center space-x-1.5">
+        <div className="mt-4 rounded-2xl bg-[#FAF7F2] border border-[#EBE4DC] overflow-hidden animate-fadeIn">
+          <div className="flex items-center justify-between px-4 py-2.5 bg-[#F4EFEA] border-b border-[#EBE4DC] text-xs">
+            <span className="font-mono font-medium text-[#2D2522] flex items-center space-x-1.5">
               <span>🐍</span>
-              <span>Python 3 Optimal Solution</span>
+              <span className="font-semibold">Python 3 Solution</span>
             </span>
             <button
               onClick={handleCopy}
-              className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+              className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-white hover:bg-[#F9F5F0] border border-[#E5DDD2] text-[#4A423D] transition-colors shadow-sm"
             >
-              {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copiedCode ? 'Copied' : 'Copy Code'}</span>
+              {copiedCode ? <Check className="w-3.5 h-3.5 text-[#166534]" /> : <Copy className="w-3.5 h-3.5 text-[#786F6A]" />}
+              <span>{copiedCode ? 'Copied' : 'Copy'}</span>
             </button>
           </div>
 
-          <pre className="p-4 text-xs font-mono text-emerald-300 overflow-x-auto leading-relaxed bg-slate-950/90">
-            <code>{problem.pythonSolution}</code>
-          </pre>
+          {/* Code Viewer with line numbers */}
+          <div className="flex text-xs font-mono bg-[#FAF7F2] overflow-x-auto">
+            <div className="w-9 py-3 bg-[#F4EFEA]/60 text-[#A89F98] select-none text-right pr-2 border-r border-[#EBE4DC] text-[11px]">
+              {solutionLines.map((_, i) => (
+                <div key={i} className="leading-5 h-5">{i + 1}</div>
+              ))}
+            </div>
+            <pre className="flex-1 p-3 text-[#2D2522] leading-5 font-mono overflow-x-auto">
+              <code>{problem.pythonSolution}</code>
+            </pre>
+          </div>
         </div>
       )}
 

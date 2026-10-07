@@ -8,7 +8,6 @@ import {
   Bookmark, 
   BookmarkCheck, 
   Sparkles,
-  HelpCircle,
   Check
 } from 'lucide-react';
 
@@ -43,36 +42,37 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   const optionLabels = ['A', 'B', 'C', 'D'];
 
   return (
-    <div className={`p-6 rounded-2xl border transition-all duration-200 ${
+    <div className={`p-6 rounded-2xl border transition-all duration-300 ${
       isSolved 
-        ? 'bg-slate-900/60 border-emerald-500/30 shadow-lg shadow-emerald-500/5' 
-        : 'bg-slate-900/90 border-slate-800 hover:border-slate-700 shadow-md'
+        ? 'bg-[#FAFDF9] border-[#BBF7D0] shadow-sm' 
+        : 'bg-white border-[#EBE4DC] hover:border-[#D9CFC4] shadow-sm hover:shadow-md'
     }`}>
+      
       {/* Header Info */}
-      <div className="flex items-start justify-between gap-4 mb-4">
+      <div className="flex items-start justify-between gap-3 mb-4">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="px-2.5 py-1 text-xs font-bold rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+          <span className="px-2.5 py-1 text-xs font-semibold rounded-lg bg-[#F4EFEA] text-[#786F6A] border border-[#E5DDD2]">
             Q{index + 1}
           </span>
-          <span className="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700/60">
+          <span className="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#FAF7F2] text-[#635A54] border border-[#EBE4DC]">
             {question.subtopic}
           </span>
-          <span className={`px-2 py-0.5 text-xs font-semibold rounded-md ${
-            question.difficulty === 'Hard' ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20' :
-            question.difficulty === 'Medium' ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' :
-            'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+          <span className={`px-2 py-0.5 text-[11px] font-medium rounded-md border ${
+            question.difficulty === 'Hard' ? 'bg-[#FFF1F2] text-[#9F1239] border-[#FECDD3]' :
+            question.difficulty === 'Medium' ? 'bg-[#FFFBEB] text-[#92400E] border-[#FDE68A]' :
+            'bg-[#F0FDF4] text-[#166534] border-[#BBF7D0]'
           }`}>
             {question.difficulty || 'Standard'}
           </span>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1.5">
           <button
             onClick={() => onToggleBookmark(question.id)}
             className={`p-1.5 rounded-lg border transition-colors ${
               isBookmarked 
-                ? 'bg-amber-500/20 border-amber-500/40 text-amber-400' 
-                : 'bg-slate-800/80 border-slate-700 text-slate-400 hover:text-slate-200'
+                ? 'bg-[#FEF3C7] border-[#FDE68A] text-[#D97706]' 
+                : 'bg-[#FAF7F2] border-[#EBE4DC] text-[#A89F98] hover:text-[#2D2522]'
             }`}
             title={isBookmarked ? "Remove Bookmark" : "Bookmark Question"}
           >
@@ -81,10 +81,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           
           <button
             onClick={() => onToggleSolved(question.id)}
-            className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-semibold border transition-all ${
+            className={`flex items-center space-x-1.5 px-2.5 py-1 rounded-lg text-xs font-medium border transition-all ${
               isSolved 
-                ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-400' 
-                : 'bg-slate-800/80 border-slate-700 text-slate-400 hover:text-slate-200'
+                ? 'bg-[#F0FDF4] border-[#86EFAC] text-[#166534]' 
+                : 'bg-[#FAF7F2] border-[#EBE4DC] text-[#786F6A] hover:text-[#2D2522] hover:bg-white'
             }`}
           >
             <Check className="w-3.5 h-3.5" />
@@ -94,26 +94,26 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
       </div>
 
       {/* Question Text */}
-      <div className="text-slate-100 text-base leading-relaxed font-medium mb-6">
+      <div className="text-[#2D2522] text-sm sm:text-base leading-relaxed font-normal mb-5">
         {question.question}
       </div>
 
       {/* Options Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-4">
         {question.options.map((opt, oIdx) => {
           const isChosen = selectedOption === oIdx;
           const isCorrect = oIdx === question.correctAnswer;
           const hasAnswered = selectedOption !== null;
 
-          let btnClass = "bg-slate-800/60 border-slate-700/80 hover:bg-slate-800 hover:border-slate-600 text-slate-200";
+          let btnClass = "bg-[#FDFBF9] border-[#EBE4DC] hover:bg-[#F7F2EC] hover:border-[#D9CFC4] text-[#3D3531]";
 
           if (hasAnswered) {
             if (isCorrect) {
-              btnClass = "bg-emerald-500/20 border-emerald-500/50 text-emerald-200 ring-1 ring-emerald-500/30";
+              btnClass = "bg-[#F0FDF4] border-[#86EFAC] text-[#166534] shadow-sm";
             } else if (isChosen && !isCorrect) {
-              btnClass = "bg-rose-500/20 border-rose-500/50 text-rose-200 ring-1 ring-rose-500/30";
+              btnClass = "bg-[#FFF1F2] border-[#FECDD3] text-[#9F1239]";
             } else {
-              btnClass = "bg-slate-900/40 border-slate-800 text-slate-400 opacity-70";
+              btnClass = "bg-[#F8F5F1]/60 border-[#EFE8DF] text-[#A89F98] opacity-75";
             }
           }
 
@@ -121,15 +121,15 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             <button
               key={oIdx}
               onClick={() => handleSelectOption(oIdx)}
-              className={`flex items-center justify-between p-3.5 rounded-xl border text-left text-sm font-medium transition-all group ${btnClass}`}
+              className={`flex items-center justify-between p-3.5 rounded-xl border text-left text-xs sm:text-sm font-normal transition-all duration-200 group ${btnClass}`}
             >
               <div className="flex items-center space-x-3">
-                <span className={`w-7 h-7 flex items-center justify-center rounded-lg text-xs font-bold border transition-colors ${
+                <span className={`w-6 h-6 flex items-center justify-center rounded-lg text-xs font-medium border transition-colors ${
                   hasAnswered && isCorrect
-                    ? 'bg-emerald-500/30 border-emerald-400 text-emerald-300'
+                    ? 'bg-[#DCFCE7] border-[#86EFAC] text-[#166534]'
                     : hasAnswered && isChosen && !isCorrect
-                    ? 'bg-rose-500/30 border-rose-400 text-rose-300'
-                    : 'bg-slate-700/50 border-slate-600 text-slate-300 group-hover:border-slate-500'
+                    ? 'bg-[#FFE4E6] border-[#FECDD3] text-[#9F1239]'
+                    : 'bg-[#FAF7F2] border-[#E5DDD2] text-[#786F6A] group-hover:border-[#C4B7A6]'
                 }`}>
                   {optionLabels[oIdx]}
                 </span>
@@ -137,10 +137,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               </div>
 
               {hasAnswered && isCorrect && (
-                <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 ml-2" />
+                <CheckCircle className="w-4 h-4 text-[#166534] flex-shrink-0 ml-2" />
               )}
               {hasAnswered && isChosen && !isCorrect && (
-                <XCircle className="w-5 h-5 text-rose-400 flex-shrink-0 ml-2" />
+                <XCircle className="w-4 h-4 text-[#9F1239] flex-shrink-0 ml-2" />
               )}
             </button>
           );
@@ -151,20 +151,20 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
       <div className="pt-2">
         <button
           onClick={() => setShowExplanation(!showExplanation)}
-          className="flex items-center space-x-2 text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors"
+          className="flex items-center space-x-1.5 text-xs font-medium text-[#786F6A] hover:text-[#2D2522] transition-colors"
         >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>{showExplanation ? 'Hide Step-by-Step Solution' : 'View Step-by-Step Solution & Derivation'}</span>
+          <Sparkles className="w-3.5 h-3.5 text-[#B86B77]" />
+          <span>{showExplanation ? 'Hide Derivation' : 'View Step-by-Step Derivation'}</span>
           {showExplanation ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
         </button>
 
         {showExplanation && (
-          <div className="mt-3 p-4 rounded-xl bg-slate-950/80 border border-indigo-500/20 text-slate-300 text-sm leading-relaxed space-y-2 animate-fadeIn">
-            <div className="flex items-center space-x-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
-              <CheckCircle className="w-4 h-4" />
+          <div className="mt-3 p-4 rounded-xl bg-[#FAF7F2] border border-[#EBE4DC] text-[#4A423D] text-xs sm:text-sm leading-relaxed space-y-2 animate-fadeIn">
+            <div className="flex items-center space-x-2 text-[#166534] font-medium text-xs">
+              <CheckCircle className="w-3.5 h-3.5" />
               <span>Correct Answer: Option {optionLabels[question.correctAnswer]} ({question.options[question.correctAnswer]})</span>
             </div>
-            <div className="text-slate-300 font-normal whitespace-pre-line pl-6 border-l-2 border-indigo-500/30">
+            <div className="text-[#5A524D] font-normal whitespace-pre-line pl-4 border-l-2 border-[#D9CFC4]">
               {question.explanation}
             </div>
           </div>

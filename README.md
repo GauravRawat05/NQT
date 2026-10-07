@@ -6,11 +6,10 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4.3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![WebAssembly](https://img.shields.io/badge/Pyodide-WASM-654FF0?style=for-the-badge&logo=webassembly&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <p align="center">
-  A high-performance, developer-first web application for cracking the <strong>TCS National Qualifier Test (TCS NQT)</strong> for <strong>Ninja</strong>, <strong>Digital</strong>, and <strong>Prime</strong> roles. Features a client-side <strong>Python WebAssembly IDE</strong>, automated test case validation, step-by-step algorithmic approaches, and over 1,000+ deduplicated past-year questions.
+  A minimalist, tranquil web application for cracking the <strong>TCS National Qualifier Test (TCS NQT)</strong> for <strong>Ninja</strong>, <strong>Digital</strong>, and <strong>Prime</strong> roles. Designed with a <strong>Warm Beige & Light Floral aesthetic</strong>, editorial typography, comprehensive <strong>Algorithmic Approaches</strong>, and verified <strong>Python 3 Solutions</strong> across over 1,000+ past-year questions.
 </p>
 
 [**🌐 Live Demo**](#-deployment-to-vercel) • [**✨ Features**](#-key-features) • [**⚡ Quick Start**](#-getting-started) • [**📂 Project Structure**](#-project-structure)
@@ -33,27 +32,16 @@
 
 ---
 
-### 💻 2. Coding Practice Workspace (154 Python-Only Problems)
-* **Strict Python-Only Standard**: Zero Java or C++ snippets; every single problem features clean, idiomatic **Python 3 solutions**.
+### 💻 2. Coding Hub: Approaches & Python Solutions (154 Problems)
+* **Strict Python-Only Standard**: Zero clutter; every single problem features clean, idiomatic **Python 3 solutions**.
 * **Clear Tier Categorization**:
   * 🟢 **Easy (Ninja / Foundation)**: Numbers, palindrome, prime, chocolate factory (push 0s to end), two-wheeler/four-wheeler production.
   * 🟡 **Medium (Digital Upgrade)**: Sliding window, Kadane's algorithm, Caesar cipher, MPCS oxygen level test, Dutch National Flag (0, 1, 2 sort).
   * 🔴 **Hard (Prime Candidate)**: Dynamic programming (Decode Ways, Subset Sum, LCS, Bitwise Subarrays), N-Queens backtracking.
-* **Progressive Disclosure on Problem Cards**:
-  * 💡 **[Approach] Button**: Reveals the core intuition, step-by-step algorithm, and Time & Space Complexity $\mathcal{O}(...)$ without spoiling code.
-  * 🐍 **[Python Solution] Button**: Expands syntax-highlighted Python 3 code with a one-click copy button.
-  * ⚡ **[Toggle Practice in IDE] Button**: Launches the LeetCode-style workspace modal.
-
----
-
-### ⚡ 3. LeetCode-Style Split Workspace Modal
-* **Left Panel**: Problem Statement, Constraints, Sample Inputs/Outputs, and dedicated tabs for Approach & Reference Solution.
-* **Right Panel (Python IDE)**:
-  * 🚀 **In-Browser Pyodide WebAssembly Engine**: Runs Python 3 natively inside the browser sandbox with zero backend server dependencies or costs.
-  * 📝 **Interactive Code Editor**: Monospace typography, line numbers gutter, Tab key handling (4 spaces), and code draft autosaving to `localStorage`.
-  * 🧪 **Automated Test Runner**: Executes code against test cases with Pass/Fail badges, actual vs. expected diffs, and execution times in milliseconds.
-  * ⌨️ **Custom Input Console (`sys.stdin`)**: Textarea allowing candidates to test edge cases with custom inputs.
-  * 🖥️ **Terminal Console**: Live terminal displaying standard output and exception tracebacks.
+* **Dedicated Approach & Solution Views**:
+  * 💡 **[Approach] Button**: Reveals the core intuition, step-by-step algorithm, and Time & Space Complexity $\mathcal{O}(...)$.
+  * 🐍 **[Python Solution] Button**: Expands syntax-formatted Python 3 reference code with line numbers and a one-click copy button.
+  * 📖 **[Full View] Reader Modal**: Focused, distraction-free reading modal for in-depth review of problem descriptions, constraints, examples, approach, and code.
 
 ---
 
@@ -82,7 +70,7 @@
 │   │   ├── coding/
 │   │   │   ├── CodingSection.tsx       # Easy/Medium/Hard tiers & topic filters
 │   │   │   ├── ProblemCard.tsx         # Problem cards with Approach & Solution accordions
-│   │   │   └── PracticeModal.tsx       # LeetCode-style split view Python IDE
+│   │   │   └── ProblemDetailModal.tsx  # Distraction-free Problem, Approach & Solution viewer
 │   │   ├── common/
 │   │   │   └── Header.tsx              # Navigation, stats counters & theme toggle
 │   │   └── hr/
@@ -92,7 +80,6 @@
 │   │   ├── coding.json                 # 154 Python-only problems with approaches
 │   │   └── hr.json                     # 50 HR interview questions & frameworks
 │   ├── hooks/
-│   │   ├── usePyodide.ts               # WebAssembly Python runtime loader & runner
 │   │   └── useLocalStorage.ts          # State persistence hook
 │   ├── types/                          # TypeScript definitions (Aptitude, Coding, HR)
 │   ├── App.tsx                         # Main app shell & router

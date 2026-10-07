@@ -1,6 +1,6 @@
 import React from 'react';
 import { AptitudeQuestion, MockTestState } from '../../types/aptitude';
-import { Trophy, CheckCircle, XCircle, Clock, RotateCcw, X, ArrowRight, Award } from 'lucide-react';
+import { Trophy, Clock, RotateCcw, X, ArrowRight, Award } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface TestResultModalProps {
@@ -20,8 +20,8 @@ export const TestResultModal: React.FC<TestResultModalProps> = ({
   React.useEffect(() => {
     if (score && score.percentage >= 60) {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 70,
+        spread: 60,
         origin: { y: 0.6 }
       });
     }
@@ -34,77 +34,77 @@ export const TestResultModal: React.FC<TestResultModalProps> = ({
   const seconds = timeUsedSeconds % 60;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-3xl my-8 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2D2522]/30 backdrop-blur-sm overflow-y-auto">
+      <div className="relative w-full max-w-2xl my-8 bg-white border border-[#EBE4DC] rounded-3xl p-6 sm:p-8 shadow-xl text-[#2D2522] animate-fadeIn">
         
         {/* Header */}
-        <div className="flex items-center justify-between pb-6 border-b border-slate-800">
+        <div className="flex items-center justify-between pb-5 border-b border-[#EBE4DC]">
           <div className="flex items-center space-x-3">
-            <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-              <Trophy className="w-6 h-6" />
+            <div className="p-2.5 rounded-2xl bg-[#FFFBEB] text-[#D97706] border border-[#FDE68A]">
+              <Trophy className="w-5 h-5 stroke-[1.8]" />
             </div>
             <div>
-              <h2 className="text-xl font-bold tracking-tight">TCS NQT Mock Test Scorecard</h2>
-              <p className="text-xs text-slate-400">Comprehensive Assessment Breakdown & Answer Key</p>
+              <h2 className="text-lg font-semibold tracking-tight text-[#2D2522]">TCS NQT Scorecard</h2>
+              <p className="text-xs text-[#786F6A]">Timed Mock Assessment Summary</p>
             </div>
           </div>
           <button 
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800"
+            className="p-1.5 text-[#A89F98] hover:text-[#2D2522] rounded-xl hover:bg-[#F4EFEA] transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Big Metrics Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
-          <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-center">
-            <div className="text-xs font-semibold text-slate-400 uppercase">Score</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-indigo-400 mt-1">
-              {score.correct} <span className="text-sm font-normal text-slate-500">/ {score.total}</span>
+        {/* Minimal Metrics Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-5">
+          <div className="p-3.5 rounded-2xl bg-[#F8F5F1] border border-[#EBE4DC] text-center">
+            <div className="text-[11px] font-medium text-[#786F6A] uppercase tracking-wider">Score</div>
+            <div className="text-2xl font-bold text-[#2D2522] mt-0.5">
+              {score.correct} <span className="text-xs font-normal text-[#A89F98]">/ {score.total}</span>
             </div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-center">
-            <div className="text-xs font-semibold text-slate-400 uppercase">Accuracy</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 mt-1">
+          <div className="p-3.5 rounded-2xl bg-[#F0FDF4] border border-[#BBF7D0] text-center">
+            <div className="text-[11px] font-medium text-[#166534] uppercase tracking-wider">Accuracy</div>
+            <div className="text-2xl font-bold text-[#166534] mt-0.5">
               {score.percentage}%
             </div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-center">
-            <div className="text-xs font-semibold text-slate-400 uppercase">Incorrect</div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-rose-400 mt-1">
+          <div className="p-3.5 rounded-2xl bg-[#FFF1F2] border border-[#FECDD3] text-center">
+            <div className="text-[11px] font-medium text-[#9F1239] uppercase tracking-wider">Incorrect</div>
+            <div className="text-2xl font-bold text-[#9F1239] mt-0.5">
               {score.incorrect}
             </div>
           </div>
 
-          <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60 text-center">
-            <div className="text-xs font-semibold text-slate-400 uppercase">Time Taken</div>
-            <div className="text-xl sm:text-2xl font-extrabold text-amber-400 mt-1">
+          <div className="p-3.5 rounded-2xl bg-[#FFFBEB] border border-[#FDE68A] text-center">
+            <div className="text-[11px] font-medium text-[#92400E] uppercase tracking-wider">Time Taken</div>
+            <div className="text-xl font-bold text-[#92400E] mt-0.5">
               {minutes}m {seconds}s
             </div>
           </div>
         </div>
 
-        {/* NQT Cutoff Analysis */}
-        <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-700/50 mb-6 flex items-start space-x-3">
-          <Award className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
-          <div className="text-sm">
-            <span className="font-semibold text-white">NQT Qualification Projection: </span>
+        {/* Qualification Projection Note */}
+        <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#EBE4DC] mb-5 flex items-start space-x-2.5">
+          <Award className="w-4 h-4 text-[#B86B77] flex-shrink-0 mt-0.5" />
+          <div className="text-xs leading-relaxed text-[#4A423D]">
+            <span className="font-semibold text-[#2D2522]">Projection: </span>
             {score.percentage >= 75 ? (
-              <span className="text-emerald-400 font-medium">Eligible for TCS Prime & Digital Interview Upgrades! Outstanding percentile.</span>
+              <span className="text-[#166534]">High probability for TCS Prime & Digital interview upgrades!</span>
             ) : score.percentage >= 50 ? (
-              <span className="text-blue-400 font-medium">Clear cut-off for TCS Ninja Foundation profile. Recommend practicing more Hard problems for Digital upgrades.</span>
+              <span className="text-[#2D2522]">Eligible for TCS Ninja Foundation profile. Practice medium/hard coding problems to qualify for Digital.</span>
             ) : (
-              <span className="text-amber-400 font-medium">Needs further practice. Review the step-by-step solutions below to strengthen foundational speed.</span>
+              <span className="text-[#92400E]">Needs further practice. Review the step-by-step solutions below to increase speed.</span>
             )}
           </div>
         </div>
 
         {/* Question Review List */}
-        <div className="max-h-72 overflow-y-auto space-y-3 pr-2 mb-6">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-2">Question Review</h3>
+        <div className="max-h-64 overflow-y-auto space-y-2.5 pr-1.5 mb-5">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-[#786F6A] mb-1.5">Question Review Key</h3>
           {questions.map((q, idx) => {
             const userAns = testState.userAnswers[q.id];
             const isCorrect = userAns === q.correctAnswer;
@@ -113,32 +113,32 @@ export const TestResultModal: React.FC<TestResultModalProps> = ({
             return (
               <div 
                 key={q.id}
-                className={`p-3.5 rounded-xl border text-xs leading-relaxed ${
+                className={`p-3 rounded-xl border text-xs leading-relaxed ${
                   isCorrect 
-                    ? 'bg-emerald-950/20 border-emerald-500/30' 
+                    ? 'bg-[#F0FDF4] border-[#BBF7D0]' 
                     : isUnanswered 
-                    ? 'bg-slate-800/40 border-slate-700/60' 
-                    : 'bg-rose-950/20 border-rose-500/30'
+                    ? 'bg-[#FAF7F2] border-[#EBE4DC]' 
+                    : 'bg-[#FFF1F2] border-[#FECDD3]'
                 }`}
               >
-                <div className="flex items-center justify-between font-semibold mb-1">
-                  <span className="text-slate-300">Q{idx + 1}: {q.subtopic}</span>
-                  <span className={`px-2 py-0.5 rounded ${
-                    isCorrect ? 'text-emerald-400 bg-emerald-500/10' :
-                    isUnanswered ? 'text-slate-400 bg-slate-700/30' :
-                    'text-rose-400 bg-rose-500/10'
+                <div className="flex items-center justify-between font-medium mb-1">
+                  <span className="text-[#3D3531]">Q{idx + 1}: {q.subtopic}</span>
+                  <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
+                    isCorrect ? 'text-[#166534] bg-[#DCFCE7]' :
+                    isUnanswered ? 'text-[#786F6A] bg-[#EFE8DF]' :
+                    'text-[#9F1239] bg-[#FFE4E6]'
                   }`}>
                     {isCorrect ? 'Correct' : isUnanswered ? 'Skipped' : 'Incorrect'}
                   </span>
                 </div>
-                <p className="text-slate-300 font-normal mb-1">{q.question}</p>
-                <div className="flex flex-wrap gap-x-4 text-[11px] text-slate-400 mt-1">
-                  <span>Your Answer: <strong className={isCorrect ? 'text-emerald-400' : 'text-rose-400'}>
+                <p className="text-[#4A423D] font-normal mb-1">{q.question}</p>
+                <div className="flex flex-wrap gap-x-3 text-[11px] text-[#635A54] mt-1">
+                  <span>Your Pick: <strong className={isCorrect ? 'text-[#166534]' : 'text-[#9F1239]'}>
                     {userAns !== undefined ? `Option ${String.fromCharCode(65 + userAns)}` : 'None'}
                   </strong></span>
-                  <span>Correct: <strong className="text-emerald-400">Option {String.fromCharCode(65 + q.correctAnswer)} ({q.options[q.correctAnswer]})</strong></span>
+                  <span>Correct: <strong className="text-[#166534]">Option {String.fromCharCode(65 + q.correctAnswer)} ({q.options[q.correctAnswer]})</strong></span>
                 </div>
-                <div className="mt-1.5 pt-1.5 border-t border-slate-700/40 text-slate-400 italic">
+                <div className="mt-1 pt-1 border-t border-[#E8DFC9]/40 text-[#6B615A] italic text-[11px]">
                   💡 {q.explanation}
                 </div>
               </div>
@@ -146,21 +146,21 @@ export const TestResultModal: React.FC<TestResultModalProps> = ({
           })}
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex items-center justify-end space-x-3 pt-4 border-t border-slate-800">
+        {/* Footer Actions */}
+        <div className="flex items-center justify-end space-x-2.5 pt-4 border-t border-[#EBE4DC]">
           <button
             onClick={onRestart}
-            className="flex items-center space-x-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors"
+            className="flex items-center space-x-1.5 px-4 py-2 rounded-xl text-xs font-medium bg-[#F4EFEA] hover:bg-[#EBE4DC] text-[#4A423D] transition-colors"
           >
-            <RotateCcw className="w-4 h-4" />
-            <span>Retake Test</span>
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Retake Exam</span>
           </button>
           <button
             onClick={onClose}
-            className="flex items-center space-x-2 px-6 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/20 transition-colors"
+            className="flex items-center space-x-1.5 px-5 py-2 rounded-xl text-xs font-semibold bg-[#2D2522] hover:bg-[#1F1A18] text-white shadow-sm transition-all"
           >
             <span>Back to Practice</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 

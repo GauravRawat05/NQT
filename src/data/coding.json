@@ -33,8 +33,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef twoSum(nums, target):\r\nhashmap = {}\r\nfor i, num in enumerate(nums):\r\ndiff = target - num\r\nif diff in hashmap:\r\nreturn [hashmap[diff], i]\r\nhashmap[num] = i\r\nreturn []\n\n# Example invocation\n",
-    "pythonSolution": "def twoSum(nums, target):\r\nhashmap = {}\r\nfor i, num in enumerate(nums):\r\ndiff = target - num\r\nif diff in hashmap:\r\nreturn [hashmap[diff], i]\r\nhashmap[num] = i\r\nreturn []\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def twoSum(nums, target):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = twoSum([2, 7, 11, 15], 9)\n    print(\"Result:\", result)",
+    "pythonSolution": "def twoSum(nums, target):\r\nhashmap = {}\r\nfor i, num in enumerate(nums):\r\ndiff = target - num\r\nif diff in hashmap:\r\nreturn [hashmap[diff], i]\r\nhashmap[num] = i\r\nreturn []\n\n# Example test run:\nif __name__ == '__main__':\n    result = twoSum([2, 7, 11, 15], 9)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -76,8 +76,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef maxSubArray(nums):\r\nmax_sum = curr = nums[0]\r\nfor num in nums[1:]:\r\ncurr = max(num, curr + num)\r\nmax_sum = max(max_sum, curr)\r\nreturn max_sum\n\n# Example invocation\n",
-    "pythonSolution": "def maxSubArray(nums):\r\nmax_sum = curr = nums[0]\r\nfor num in nums[1:]:\r\ncurr = max(num, curr + num)\r\nmax_sum = max(max_sum, curr)\r\nreturn max_sum\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def maxSubArray(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = maxSubArray([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def maxSubArray(nums):\r\nmax_sum = curr = nums[0]\r\nfor num in nums[1:]:\r\ncurr = max(num, curr + num)\r\nmax_sum = max(max_sum, curr)\r\nreturn max_sum\n\n# Example test run:\nif __name__ == '__main__':\n    result = maxSubArray([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -119,8 +119,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef isAnagram(s, t):\r\nreturn sorted(s) == sorted(t)\n\n# Example invocation\n",
-    "pythonSolution": "def isAnagram(s, t):\r\nreturn sorted(s) == sorted(t)\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def isAnagram(s, t):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = isAnagram(\"abc\", \"abc\")\n    print(\"Result:\", result)",
+    "pythonSolution": "def isAnagram(s, t):\r\nreturn sorted(s) == sorted(t)\n\n# Example test run:\nif __name__ == '__main__':\n    result = isAnagram(\"abc\", \"abc\")\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -162,8 +162,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef longestPalindrome(s):\r\nstart = max_len = 0\r\nfor i in range(len(s)):\r\nfor l, r in [(i, i), (i, i+1)]:\r\nwhile l >= 0 and r < len(s) and s[l] == s[r]:\n\n# Example invocation\n",
-    "pythonSolution": "def longestPalindrome(s):\r\nstart = max_len = 0\r\nfor i in range(len(s)):\r\nfor l, r in [(i, i), (i, i+1)]:\r\nwhile l >= 0 and r < len(s) and s[l] == s[r]:\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def longestPalindrome(s):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = longestPalindrome(\"abc\")\n    print(\"Result:\", result)",
+    "pythonSolution": "def longestPalindrome(s):\r\nstart = max_len = 0\r\nfor i in range(len(s)):\r\nfor l, r in [(i, i), (i, i+1)]:\r\nwhile l >= 0 and r < len(s) and s[l] == s[r]:\n\n# Example test run:\nif __name__ == '__main__':\n    result = longestPalindrome(\"abc\")\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -205,8 +205,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef reverseList(head):\r\nprev = None\r\nwhile head:\r\nnxt = head.next\n\n# Example invocation\n",
-    "pythonSolution": "def reverseList(head):\r\nprev = None\r\nwhile head:\r\nnxt = head.next\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def reverseList(head):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = reverseList(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def reverseList(head):\r\nprev = None\r\nwhile head:\r\nnxt = head.next\n\n# Example test run:\nif __name__ == '__main__':\n    result = reverseList(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -248,8 +248,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef addTwoNumbers(l1, l2):\r\ndummy = ListNode(0)\r\ncurr = dummy\r\ncarry = 0\r\nwhile l1 or l2 or carry:\r\nsum = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry\r\ncarry = sum // 10\n\n# Example invocation\n",
-    "pythonSolution": "def addTwoNumbers(l1, l2):\r\ndummy = ListNode(0)\r\ncurr = dummy\r\ncarry = 0\r\nwhile l1 or l2 or carry:\r\nsum = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry\r\ncarry = sum // 10\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def addTwoNumbers(l1, l2):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = addTwoNumbers(..., ...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def addTwoNumbers(l1, l2):\r\ndummy = ListNode(0)\r\ncurr = dummy\r\ncarry = 0\r\nwhile l1 or l2 or carry:\r\nsum = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry\r\ncarry = sum // 10\n\n# Example test run:\nif __name__ == '__main__':\n    result = addTwoNumbers(..., ...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -291,8 +291,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef merge(intervals):\n\n# Example invocation\n",
-    "pythonSolution": "def merge(intervals):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def merge(intervals):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = merge(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def merge(intervals):\n\n# Example test run:\nif __name__ == '__main__':\n    result = merge(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -334,8 +334,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef missingNumber(nums):\r\nn = len(nums)\r\nreturn n * (n + 1) // 2 - sum(nums)\n\n# Example invocation\n",
-    "pythonSolution": "def missingNumber(nums):\r\nn = len(nums)\r\nreturn n * (n + 1) // 2 - sum(nums)\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def missingNumber(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = missingNumber([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def missingNumber(nums):\r\nn = len(nums)\r\nreturn n * (n + 1) // 2 - sum(nums)\n\n# Example test run:\nif __name__ == '__main__':\n    result = missingNumber([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -377,8 +377,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef exist(board, word):\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\r\nif backtrack(board, word, i, j, 0):\r\nreturn True\r\nreturn False\r\ndef backtrack(board, word, i, j, index):\r\nif index == len(word):\r\nreturn True\r\nif i < 0 or j < 0 or i >= len(board) or j >= len(board[0]) or\n\n# Example invocation\n",
-    "pythonSolution": "def exist(board, word):\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\r\nif backtrack(board, word, i, j, 0):\r\nreturn True\r\nreturn False\r\ndef backtrack(board, word, i, j, index):\r\nif index == len(word):\r\nreturn True\r\nif i < 0 or j < 0 or i >= len(board) or j >= len(board[0]) or\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def exist(board, word):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = exist(..., ...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def exist(board, word):\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\r\nif backtrack(board, word, i, j, 0):\r\nreturn True\r\nreturn False\r\ndef backtrack(board, word, i, j, index):\r\nif index == len(word):\r\nreturn True\r\nif i < 0 or j < 0 or i >= len(board) or j >= len(board[0]) or\n\n# Example test run:\nif __name__ == '__main__':\n    result = exist(..., ...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -420,8 +420,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef subsets(nums):\r\nresult = []\n\n# Example invocation\n",
-    "pythonSolution": "def subsets(nums):\r\nresult = []\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def subsets(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = subsets([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def subsets(nums):\r\nresult = []\n\n# Example test run:\nif __name__ == '__main__':\n    result = subsets([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -462,8 +462,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef findDuplicate(nums):\r\nslow = fast = nums[0]\r\nwhile True:\r\nslow = nums[slow]\r\nfast = nums[nums[fast]]\r\nif slow == fast:\n\n# Example invocation\n",
-    "pythonSolution": "def findDuplicate(nums):\r\nslow = fast = nums[0]\r\nwhile True:\r\nslow = nums[slow]\r\nfast = nums[nums[fast]]\r\nif slow == fast:\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def findDuplicate(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = findDuplicate([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def findDuplicate(nums):\r\nslow = fast = nums[0]\r\nwhile True:\r\nslow = nums[slow]\r\nfast = nums[nums[fast]]\r\nif slow == fast:\n\n# Example test run:\nif __name__ == '__main__':\n    result = findDuplicate([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -504,8 +504,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef merge(nums1, m, nums2, n):\n\n# Example invocation\n",
-    "pythonSolution": "def merge(nums1, m, nums2, n):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def merge(nums1, m, nums2, n):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = merge(..., ..., ..., 5)\n    print(\"Result:\", result)",
+    "pythonSolution": "def merge(nums1, m, nums2, n):\n\n# Example test run:\nif __name__ == '__main__':\n    result = merge(..., ..., ..., 5)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -546,8 +546,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef rotate(matrix):\r\nn = len(matrix)\r\nfor i in range(n // 2):\r\nfor j in range(i, n - i - 1):\r\ntemp = matrix[i][j]\r\nmatrix[i][j] = matrix[n - j - 1][i]\n\n# Example invocation\n",
-    "pythonSolution": "def rotate(matrix):\r\nn = len(matrix)\r\nfor i in range(n // 2):\r\nfor j in range(i, n - i - 1):\r\ntemp = matrix[i][j]\r\nmatrix[i][j] = matrix[n - j - 1][i]\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def rotate(matrix):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = rotate(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def rotate(matrix):\r\nn = len(matrix)\r\nfor i in range(n // 2):\r\nfor j in range(i, n - i - 1):\r\ntemp = matrix[i][j]\r\nmatrix[i][j] = matrix[n - j - 1][i]\n\n# Example test run:\nif __name__ == '__main__':\n    result = rotate(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -588,8 +588,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef lengthOfLongestSubstring(s):\r\nchar_set = set()\n\n# Example invocation\n",
-    "pythonSolution": "def lengthOfLongestSubstring(s):\r\nchar_set = set()\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def lengthOfLongestSubstring(s):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = lengthOfLongestSubstring(\"abc\")\n    print(\"Result:\", result)",
+    "pythonSolution": "def lengthOfLongestSubstring(s):\r\nchar_set = set()\n\n# Example test run:\nif __name__ == '__main__':\n    result = lengthOfLongestSubstring(\"abc\")\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -630,8 +630,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef maxArea(height):\n\n# Example invocation\n",
-    "pythonSolution": "def maxArea(height):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def maxArea(height):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = maxArea(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def maxArea(height):\n\n# Example test run:\nif __name__ == '__main__':\n    result = maxArea(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -672,8 +672,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef permute(nums):\r\nresult = []\n\n# Example invocation\n",
-    "pythonSolution": "def permute(nums):\r\nresult = []\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def permute(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = permute([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def permute(nums):\r\nresult = []\n\n# Example test run:\nif __name__ == '__main__':\n    result = permute([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -714,8 +714,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef subsets(nums):\r\nresult = []\n\n# Example invocation\n",
-    "pythonSolution": "def subsets(nums):\r\nresult = []\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def subsets(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = subsets([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def subsets(nums):\r\nresult = []\n\n# Example test run:\nif __name__ == '__main__':\n    result = subsets([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -756,8 +756,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef setZeroes(matrix):\r\nrow_zero = any(matrix[i][0] == 0 for i in range(len(matrix)))\r\ncol_zero = any(matrix[0][j] == 0 for j in range(len(matrix[0])))\r\nfor i in range(1, len(matrix)):\r\nfor j in range(1, len(matrix[0])):\r\nif matrix[i][j] == 0:\r\nmatrix[i][0] = 0\r\nmatrix[0][j] = 0\r\nfor i in range(1, len(matrix)):\n\n# Example invocation\n",
-    "pythonSolution": "def setZeroes(matrix):\r\nrow_zero = any(matrix[i][0] == 0 for i in range(len(matrix)))\r\ncol_zero = any(matrix[0][j] == 0 for j in range(len(matrix[0])))\r\nfor i in range(1, len(matrix)):\r\nfor j in range(1, len(matrix[0])):\r\nif matrix[i][j] == 0:\r\nmatrix[i][0] = 0\r\nmatrix[0][j] = 0\r\nfor i in range(1, len(matrix)):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def setZeroes(matrix):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = setZeroes(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def setZeroes(matrix):\r\nrow_zero = any(matrix[i][0] == 0 for i in range(len(matrix)))\r\ncol_zero = any(matrix[0][j] == 0 for j in range(len(matrix[0])))\r\nfor i in range(1, len(matrix)):\r\nfor j in range(1, len(matrix[0])):\r\nif matrix[i][j] == 0:\r\nmatrix[i][0] = 0\r\nmatrix[0][j] = 0\r\nfor i in range(1, len(matrix)):\n\n# Example test run:\nif __name__ == '__main__':\n    result = setZeroes(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -798,8 +798,8 @@
       "timeComplexity": "O(N^2) or O(N log N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef findWords(board, words):\r\nresult = set()\r\ntrie = buildTrie(words)\r\nvisited = [[False] * len(board[0]) for _ in range(len(board))]\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\n\n# Example invocation\n",
-    "pythonSolution": "def findWords(board, words):\r\nresult = set()\r\ntrie = buildTrie(words)\r\nvisited = [[False] * len(board[0]) for _ in range(len(board))]\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def findWords(board, words):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = findWords(..., ...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def findWords(board, words):\r\nresult = set()\r\ntrie = buildTrie(words)\r\nvisited = [[False] * len(board[0]) for _ in range(len(board))]\r\nfor i in range(len(board)):\r\nfor j in range(len(board[0])):\n\n# Example test run:\nif __name__ == '__main__':\n    result = findWords(..., ...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -840,8 +840,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef merge(intervals):\r\nif not intervals:\r\nreturn []\n\n# Example invocation\n",
-    "pythonSolution": "def merge(intervals):\r\nif not intervals:\r\nreturn []\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def merge(intervals):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = merge(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def merge(intervals):\r\nif not intervals:\r\nreturn []\n\n# Example test run:\nif __name__ == '__main__':\n    result = merge(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -882,8 +882,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef uniquePathsWithObstacles(grid):\n\n# Example invocation\n",
-    "pythonSolution": "def uniquePathsWithObstacles(grid):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def uniquePathsWithObstacles(grid):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = uniquePathsWithObstacles(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def uniquePathsWithObstacles(grid):\n\n# Example test run:\nif __name__ == '__main__':\n    result = uniquePathsWithObstacles(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -924,8 +924,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef maxProfit(prices):\r\nmin_price = float('inf')\r\nmax_profit = 0\r\nfor price in prices:\r\nmin_price = min(min_price, price)\r\nmax_profit = max(max_profit, price - min_price)\r\nreturn max_profit\n\n# Example invocation\n",
-    "pythonSolution": "def maxProfit(prices):\r\nmin_price = float('inf')\r\nmax_profit = 0\r\nfor price in prices:\r\nmin_price = min(min_price, price)\r\nmax_profit = max(max_profit, price - min_price)\r\nreturn max_profit\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def maxProfit(prices):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = maxProfit(...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def maxProfit(prices):\r\nmin_price = float('inf')\r\nmax_profit = 0\r\nfor price in prices:\r\nmin_price = min(min_price, price)\r\nmax_profit = max(max_profit, price - min_price)\r\nreturn max_profit\n\n# Example test run:\nif __name__ == '__main__':\n    result = maxProfit(...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -966,8 +966,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef longestPalindrome(s):\r\ndef expandAroundCenter(s, left, right):\r\nwhile left >= 0 and right < len(s) and s[left] == s[right]:\n\n# Example invocation\n",
-    "pythonSolution": "def longestPalindrome(s):\r\ndef expandAroundCenter(s, left, right):\r\nwhile left >= 0 and right < len(s) and s[left] == s[right]:\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def longestPalindrome(s):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = longestPalindrome(\"abc\")\n    print(\"Result:\", result)",
+    "pythonSolution": "def longestPalindrome(s):\r\ndef expandAroundCenter(s, left, right):\r\nwhile left >= 0 and right < len(s) and s[left] == s[right]:\n\n# Example test run:\nif __name__ == '__main__':\n    result = longestPalindrome(\"abc\")\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -1008,8 +1008,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef jump(nums):\n\n# Example invocation\n",
-    "pythonSolution": "def jump(nums):\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def jump(nums):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = jump([2, 7, 11, 15])\n    print(\"Result:\", result)",
+    "pythonSolution": "def jump(nums):\n\n# Example test run:\nif __name__ == '__main__':\n    result = jump([2, 7, 11, 15])\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -1051,8 +1051,8 @@
       "timeComplexity": "O(N^2) or O(N log N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef numDecodings(s):\r\nif not s or s[0] == '0': return 0\n\n# Example invocation\n",
-    "pythonSolution": "def numDecodings(s):\r\nif not s or s[0] == '0': return 0\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def numDecodings(s):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = numDecodings(\"abc\")\n    print(\"Result:\", result)",
+    "pythonSolution": "def numDecodings(s):\r\nif not s or s[0] == '0': return 0\n\n# Example test run:\nif __name__ == '__main__':\n    result = numDecodings(\"abc\")\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
@@ -1094,8 +1094,8 @@
       "timeComplexity": "O(N)",
       "spaceComplexity": "O(N) or O(1)"
     },
-    "starterCode": "# Complete the solution function below\ndef wordBreak(s, wordDict):\r\nwordSet = set(wordDict)\r\ndp = [False] * (len(s) + 1)\r\ndp[0] = True\r\nfor i in range(1, len(s) + 1):\r\nfor j in range(i):\r\nif dp[j] and s[j:i] in wordSet:\r\ndp[i] = True\n\n# Example invocation\n",
-    "pythonSolution": "def wordBreak(s, wordDict):\r\nwordSet = set(wordDict)\r\ndp = [False] * (len(s) + 1)\r\ndp[0] = True\r\nfor i in range(1, len(s) + 1):\r\nfor j in range(i):\r\nif dp[j] and s[j:i] in wordSet:\r\ndp[i] = True\n\n# Driver helper\nif __name__ == '__main__':\n    pass",
+    "starterCode": "def wordBreak(s, wordDict):\n    # TODO: Implement your solution here\n    pass\n\n# Run test:\nif __name__ == '__main__':\n    result = wordBreak(\"abc\", ...)\n    print(\"Result:\", result)",
+    "pythonSolution": "def wordBreak(s, wordDict):\r\nwordSet = set(wordDict)\r\ndp = [False] * (len(s) + 1)\r\ndp[0] = True\r\nfor i in range(1, len(s) + 1):\r\nfor j in range(i):\r\nif dp[j] and s[j:i] in wordSet:\r\ndp[i] = True\n\n# Example test run:\nif __name__ == '__main__':\n    result = wordBreak(\"abc\", ...)\n    print(\"Result:\", result)",
     "testCases": [
       {
         "input": "",
