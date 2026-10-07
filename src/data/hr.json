@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Tell me about yourself.",
+    "category": "Background & Goals",
+    "modelAnswer": "I am a final-year engineering student with a strong interest in software development and problem-solving. I am passionate about learning new technologies and continuously improving my technical and communication skills.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Why do you want to join TCS?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "TCS is a globally reputed company known for innovation, stability, and structured career growth. I want to begin my career in an organization that provides strong training and diverse project exposure.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What do you know about TCS?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "TCS is part of the Tata Group and one of the largest IT service companies in the world. It provides services in cloud, AI, digital transformation, and consulting across multiple countries.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Why should we hire you?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "I have strong fundamentals, adaptability, and a positive learning attitude. I am dedicated, hardworking, and ready to contribute effectively to team goals.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What are your strengths?",
+    "category": "Background & Goals",
+    "modelAnswer": "My strengths include problem-solving skills, time management, and teamwork. I stay consistent and focused while completing tasks.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What are your weaknesses?",
+    "category": "Background & Goals",
+    "modelAnswer": "Sometimes I focus too much on details to ensure perfection. However, I am learning to balance efficiency and productivity.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Where do you see yourself in 5 years?",
+    "category": "Background & Goals",
+    "modelAnswer": "In five years, I see myself as a skilled professional handling important responsibilities. I aim to grow within the organization and contribute significantly.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Are you willing to relocate?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Yes, I am open to relocation based on company requirements. I believe it helps in gaining diverse exposure and experience.",
+    "interviewerIntent": "Verifying geographical flexibility and willingness to support 24x7 global operational teams.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Are you comfortable with rotational shifts?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Yes, I understand that IT companies work globally. I am flexible and comfortable with rotational shifts if required.",
+    "interviewerIntent": "Verifying geographical flexibility and willingness to support 24x7 global operational teams.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Are you planning for higher studies?",
+    "category": "Background & Goals",
+    "modelAnswer": "Currently, my focus is on gaining industry experience and building my career. I want to learn practically before considering further education.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Explain your final year project.",
+    "category": "Technical Projects",
+    "modelAnswer": "My project focused on solving a real-world problem using technology. It involved planning, development, testing, and proper documentation.",
+    "interviewerIntent": "Evaluating your hands-on problem-solving, engineering contributions, and collaboration.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What was your role in the project?",
+    "category": "Technical Projects",
+    "modelAnswer": "I was responsible for coding and testing specific modules. I also collaborated with team members to ensure timely completion.",
+    "interviewerIntent": "Evaluating your hands-on problem-solving, engineering contributions, and collaboration.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 13,
+    "question": "What challenges did you face in your project?",
+    "category": "Technical Projects",
+    "modelAnswer": "We faced technical difficulties and time constraints during development. Through teamwork and research, we successfully resolved them.",
+    "interviewerIntent": "Evaluating your hands-on problem-solving, engineering contributions, and collaboration.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 14,
+    "question": "How do you handle pressure?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I stay calm and break complex problems into smaller manageable tasks. Proper planning helps me work efficiently under pressure.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 15,
+    "question": "How do you manage deadlines?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I prioritize tasks based on urgency and importance. I also set small milestones to ensure timely completion.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Tell me about teamwork experience.",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I have worked in teams where tasks were divided based on strengths. Clear communication helped us achieve our goals successfully.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 17,
+    "question": "How do you handle criticism?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I accept criticism positively and treat it as feedback for improvement. It helps me grow both personally and professionally.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What motivates you?",
+    "category": "Background & Goals",
+    "modelAnswer": "Learning new things and achieving goals motivate me. Continuous improvement keeps me driven.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Do you prefer working alone or in a team?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I am comfortable working both independently and in teams. However, teamwork often produces better and faster results.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What are your hobbies?",
+    "category": "Background & Goals",
+    "modelAnswer": "My hobbies include reading about technology and improving my coding skills. I also enjoy activities that enhance creativity and focus.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 21,
+    "question": "How do you stay updated with technology?",
+    "category": "Technical Projects",
+    "modelAnswer": "I follow tech blogs, online courses, and practice coding regularly. I also participate in coding challenges to sharpen my skills.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 22,
+    "question": "What is your biggest achievement?",
+    "category": "Background & Goals",
+    "modelAnswer": "My biggest achievement is successfully completing challenging academic projects. It helped me gain confidence and practical knowledge.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Describe a failure and what you learned.",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I once underestimated a task which caused delays. I learned the importance of proper planning and time management.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What makes you different from others?",
+    "category": "Background & Goals",
+    "modelAnswer": "My learning mindset and adaptability make me different. I focus on consistency and improvement every day.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 25,
+    "question": "How quickly can you adapt to new technology?",
+    "category": "Technical Projects",
+    "modelAnswer": "I am a quick learner and comfortable exploring new concepts. With proper practice, I adapt efficiently.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Describe your leadership experience.",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I have led small academic teams during projects. I ensured coordination and task completion within deadlines.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 27,
+    "question": "How do you resolve team conflicts?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I listen to all perspectives calmly and focus on finding a common solution. Mutual understanding is key to conflict resolution.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 28,
+    "question": "What is your ideal work environment?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "I prefer a collaborative environment that encourages learning and innovation. A supportive team motivates better performance.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 29,
+    "question": "What are your short-term goals?",
+    "category": "Background & Goals",
+    "modelAnswer": "My short-term goal is to gain industry experience and strengthen my technical skills. I want to contribute meaningfully to projects.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 30,
+    "question": "What are your long-term goals?",
+    "category": "Background & Goals",
+    "modelAnswer": "My long-term goal is to take on higher responsibilities and grow into a leadership role. I aim to add value to the organization.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 31,
+    "question": "How do you prioritize tasks?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I evaluate tasks based on deadlines and importance. This helps me maintain efficiency and productivity.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 32,
+    "question": "Are you comfortable with tight deadlines?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "Yes, I stay organized and focused during tight deadlines. I ensure quality while meeting targets.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 33,
+    "question": "What do you expect from TCS?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "I expect learning opportunities and professional growth. I also look forward to working on challenging projects.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 34,
+    "question": "How do you ensure quality in work?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I review my work carefully and test thoroughly before submission. I focus on accuracy and efficiency.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 35,
+    "question": "Have you worked on real-world projects?",
+    "category": "Technical Projects",
+    "modelAnswer": "Yes, I have worked on practical academic projects. They involved real-world problem- solving scenarios.",
+    "interviewerIntent": "Evaluating your hands-on problem-solving, engineering contributions, and collaboration.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 36,
+    "question": "How do you improve your skills?",
+    "category": "Background & Goals",
+    "modelAnswer": "I practice regularly and seek feedback from mentors. Continuous learning helps me improve.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 37,
+    "question": "What is teamwork according to you?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "Teamwork means collaboration toward a shared goal. It requires communication, trust, and responsibility.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 38,
+    "question": "How do you deal with failure?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I analyze my mistakes and learn from them. Failure motivates me to improve further.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 39,
+    "question": "Are you comfortable learning new domains?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Yes, I am open to learning new domains. It helps expand knowledge and adaptability.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 40,
+    "question": "What is professionalism?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Professionalism means maintaining discipline, integrity, and respect at work. It reflects responsibility and commitment.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 41,
+    "question": "What is your biggest professional strength?",
+    "category": "Background & Goals",
+    "modelAnswer": "My biggest strength is consistency in learning and performance. I stay committed to achieving goals.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 42,
+    "question": "How do you handle multitasking?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I manage multitasking by organizing tasks effectively. Proper scheduling helps maintain productivity.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 43,
+    "question": "Why IT sector?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "The IT sector offers innovation and continuous growth opportunities. It allows solving real- world problems through technology.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 44,
+    "question": "What if assigned a non-technical role?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "I will treat it as a learning opportunity. I will give my best and perform responsibly.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 45,
+    "question": "Are you comfortable signing a bond?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Yes, I respect company policies and commitments. I am comfortable if it aligns with professional growth.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 46,
+    "question": "How do you handle repetitive tasks?",
+    "category": "Behavioral & Leadership",
+    "modelAnswer": "I stay consistent and maintain quality standards. Discipline helps manage repetitive work effectively.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 47,
+    "question": "Do you have any questions for us?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "Yes, I would like to know about training programs and growth opportunities. I am interested in understanding career progression paths.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 48,
+    "question": "What are your salary expectations?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "I am comfortable with the company’s standard package for this role. My focus is more on learning and growth.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 49,
+    "question": "What is your greatest learning so far?",
+    "category": "Background & Goals",
+    "modelAnswer": "Consistency and discipline lead to long-term success. Continuous learning is essential for growth.",
+    "interviewerIntent": "Assess communication skills, cultural fit, and readiness for enterprise consulting.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  },
+  {
+    "id": 50,
+    "question": "Why TCS over other companies?",
+    "category": "TCS & Corporate Fit",
+    "modelAnswer": "TCS offers global exposure, stability, and structured growth. Its strong work culture makes it an ideal place to start my career.",
+    "interviewerIntent": "Assessing your knowledge of the Tata Group legacy, market standing, and long-term commitment.",
+    "keyPoints": [
+      "Frame responses using the STAR format (Situation, Task, Action, Result).",
+      "Demonstrate continuous learning, adaptability, and high integrity.",
+      "Emphasize teamwork, constructive handling of feedback, and customer empathy."
+    ]
+  }
+]
